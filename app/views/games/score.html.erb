@@ -1,7 +1,7 @@
 <% if @in_grid && @eng_word %>
-<p>Congratulations!<%= @word %> is a valid English word!</p>
+<p>Congratulations! <em><%= @word %></em> is a valid English word!</p>
 <% elsif @in_grid == false %>
-<p>Sorry but the word can't built out of <%= @grid %>
+<p>Sorry but the word can't built out of  [ <%= @grid %> ]</p>
 <% elsif @eng_word == false%>
 <p>Sorry but <%= @word %> does not seem to be a valid English word.</p>
 <% end %>

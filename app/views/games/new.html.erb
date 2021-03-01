@@ -1,13 +1,17 @@
 <div class='container'>
   <% @grid.each do |letter| %>
+  <div class='letter'>
     <%= letter %>
+  </div>
   <% end %>
 </div>
 <div>
-  <form action="score" method="POST">
+  <label id="words">what is the longest word you can find?</label>
+  <form class='form' action="score" method="POST">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= hidden_field_tag :grid, @grid %>
-    <input type="text" name="word">
-    <input type="submit" value="Enter">
+
+    <input type="text" id="words" name="word">
+    <input type="submit" class='btn' value="Enter">
   </form>
 </div>
